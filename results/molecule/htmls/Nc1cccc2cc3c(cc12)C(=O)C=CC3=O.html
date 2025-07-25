@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <title>Reaction Results</title>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h2, h3 { margin-top: 30px; }
+            .scroll-table { overflow-x: auto; margin-bottom: 40px; }
+            table {
+              margin-top: 10px;
+              border-collapse: collapse;
+              width: 100%;
+              min-width: 1000px;
+              table-layout: fixed;
+            }
+            table, th, td { border: 1px solid #ccc; }
+            th, td {
+              padding: 8px;
+              text-align: center;
+              vertical-align: middle;
+              word-wrap: break-word;
+            }
+            img {
+              display: block;
+              max-width: 550px;
+              margin: auto;
+            }
+    .export-btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+          </style>
+          <script>
+            function downloadCSV() {
+              let csv = [];
+              csv.push("Reactant SMILES,Product SMILES,ElementaryStepName,Reaction Energy");
+
+              const tables = document.querySelectorAll("table");
+              tables.forEach(table => {
+                let rows = table.querySelectorAll("tbody tr");
+                rows.forEach(row => {
+                  let cols = row.querySelectorAll("td");
+                  if (cols.length === 6) {
+                    let reactant = cols[1].innerText.trim();
+                    let product = cols[3].innerText.trim();
+                    let step = cols[4].innerText.trim();
+                    let energy = cols[5].innerText.trim();
+                    csv.push(
+                      '"' + reactant.replace(/"/g, '""') + '",' +
+                      '"' + product.replace(/"/g, '""') + '",' +
+                      '"' + step.replace(/"/g, '""') + '",' +
+                      '"' + energy.replace(/"/g, '""') + '"'
+                    );
+                  } else if (cols.length === 10) {
+                    let reactant1 = cols[1].innerText.trim();
+                    let product1 = cols[3].innerText.trim();
+                    let step1 = cols[4].innerText.trim();
+                    let energy1 = cols[5].innerText.trim();
+
+                    let product2 = cols[7].innerText.trim();
+                    let step2 = cols[8].innerText.trim();
+                    let energy2 = cols[9].innerText.trim();
+
+                    csv.push(
+                      '"' + reactant1.replace(/"/g, '""') + '",' +
+                      '"' + product1.replace(/"/g, '""') + '",' +
+                      '"' + step1.replace(/"/g, '""') + '",' +
+                      '"' + energy1.replace(/"/g, '""') + '"'
+                    );
+                    csv.push(
+                      '"' + product1.replace(/"/g, '""') + '",' +
+                      '"' + product2.replace(/"/g, '""') + '",' +
+                      '"' + step2.replace(/"/g, '""') + '",' +
+                      '"' + energy2.replace(/"/g, '""') + '"'
+                    );
+                  }
+                });
+              });
+
+              let csvContent = csv.join("\n");
+              let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+              let link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.setAttribute("download", "reaction_data.csv");
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }
+          </script>
+        </head>
+        <body>
+          <img src="../modes.svg" alt="Header Image" style="width: 100%; max-height: 200px; object-fit: cover;" />
+          <button class="export-btn" onclick="downloadCSV()">Export to CSV</button>
+        <h3>Electrochemical reaction acid</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(O)ccc(O)c3cc12</td>
+      <td>Electrochemical reaction acid step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Electrochemical reaction base</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c([O-])ccc([O-])c3cc12</td>
+      <td>Electrochemical reaction base step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Gem-diol formation</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_2.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_2.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(O)(O)C=CC3=O</td>
+      <td>Gem-diol formation step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_3.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_3.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3(O)O</td>
+      <td>Gem-diol formation step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Anthrone formation</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_4.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_4.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3</td>
+      <td>Anthrone formation step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_5.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_5.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)CC=CC3=O</td>
+      <td>Anthrone formation step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Michael addition</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_6.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_6.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(O)=CC(O)C3=O</td>
+      <td>Michael addition step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_7.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_7.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C(O)C=C3O</td>
+      <td>Michael addition step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_8.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_8.png" width="150"/></td>
+      <td>Nc1cccc2c1C(O)C1=C(O)C=CC(=O)C1=C2</td>
+      <td>Michael addition step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_0_9.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_0_9.png" width="150"/></td>
+      <td>Nc1cccc2c1C=C1C(=O)C=CC(O)=C1C2O</td>
+      <td>Michael addition step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Tautomerism</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_9_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(O)ccc(O)c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_9_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(O)=CCC3=O</td>
+      <td>Tautomerism step1</td>
+      <td></td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_10_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)CCC3=O</td>
+      <td>Tautomerism step2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_9_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(O)ccc(O)c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_9_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)CC=C3O</td>
+      <td>Tautomerism step1</td>
+      <td></td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_12_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)CCC3=O</td>
+      <td>Tautomerism step2</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Disproportionation</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_14_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c([O-])ccc([O-])c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_14_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3[cH-]ccc(=O)c3cc12</td>
+      <td>Disproportionation step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_14_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c([O-])ccc([O-])c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_14_1.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(=O)cc[cH-]c3cc12</td>
+      <td>Disproportionation step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div><h3>Dimeration</h3>
+<div class="scroll-table"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Reactant</th>
+      <th>Reactant SMILES</th>
+      <th>Product</th>
+      <th>Product SMILES</th>
+      <th>ElementaryStepName</th>
+      <th>Reaction Energy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_15_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3[cH-]ccc(=O)c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_15_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(=O)C=CC3C1C=CC(=O)c2cc3c(N)cccc3cc21</td>
+      <td>Dimeration step1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_mol_17_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(=O)cc[cH-]c3cc12</td>
+      <td><img src="../img/group_GOVFXWUOOKMVFM-UHFFFAOYSA-N_child_17_0.png" width="150"/></td>
+      <td>Nc1cccc2cc3c(cc12)C(C1C=CC(=O)c2cc4cccc(N)c4cc21)C=CC3=O</td>
+      <td>Dimeration step1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div></body>
+</html>

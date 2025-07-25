@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrochemical reaction base</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-top: 30px; }
+    .scroll-table { overflow-x: auto; margin-bottom: 40px; }
+    table {
+      margin-top: 10px;
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1200px;
+      table-layout: fixed;
+    }
+    table, th, td { border: 1px solid #ccc; }
+    th, td {
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+    }
+    img {
+        display: block;
+        max-width: 550px;
+        margin: auto;
+    }
+    .export-btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .export-btn:hover {
+        background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <img src="../modes.svg" alt="Header Image" style="width: 100%; max-height: 200px; object-fit: cover;" />
+  <button class="export-btn" onclick="exportTableToCSV()">Export to CSV</button>
+  <div class="scroll-table">
+  <table id="reactionTable">
+
+        <tr>
+          <th>Reactant</th><th>Reactant SMILES</th>
+          <th>Product</th><th>Product SMILES</th>
+          <th>ElementaryStepName</th><th>Reaction Energy</th>
+        </tr>
+        <tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1.png" width="150"/></td><td>O=C1C=CC(=O)C=C1</td><td><img src="../img/p_1.png" width="150"/></td><td>[O-]c1ccc([O-])cc1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_10.png" width="150"/></td><td>O=C1C=CC(=O)c2ccccc21</td><td><img src="../img/p_10.png" width="150"/></td><td>[O-]c1ccc([O-])c2ccccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_20.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)ccc(=O)c1=2</td><td><img src="../img/p_20.png" width="150"/></td><td>O=C1C=CC(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_31.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2ccccc21</td><td><img src="../img/p_31.png" width="150"/></td><td>[O-]c1c2ccccc2c([O-])c2ccccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_40.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_40.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc3ccccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_50.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_50.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c([O-])ccc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_61.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_61.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_62.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_62.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1ccccc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_82.png" width="150"/></td><td>O=C1C=CC(=O)C(S(=O)(=O)O)=C1</td><td><img src="../img/p_82.png" width="150"/></td><td>O=S(=O)(O)c1cc([O-])ccc1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_104.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_104.png" width="150"/></td><td>O=S(=O)(O)c1cccc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_122.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_122.png" width="150"/></td><td>O=S(=O)(O)c1ccc2c([O-])ccc([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_141.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2ccccc21</td><td><img src="../img/p_141.png" width="150"/></td><td>O=S(=O)(O)c1cc([O-])c2ccccc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_160.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(S(=O)(=O)O)cc(=O)c1=2</td><td><img src="../img/p_160.png" width="150"/></td><td>O=C1C=CC(=O)c2c([O-])c(S(=O)(=O)O)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_161.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(S(=O)(=O)O)cc(=O)c1=2</td><td><img src="../img/p_161.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_199.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_199.png" width="150"/></td><td>O=S(=O)(O)c1cccc2c([O-])c3ccccc3c([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_221.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_221.png" width="150"/></td><td>O=S(=O)(O)c1ccc2c([O-])c3ccccc3c([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_244.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2S(=O)(=O)O</td><td><img src="../img/p_244.png" width="150"/></td><td>O=S(=O)(O)c1c2ccccc2cc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_262.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(S(=O)(=O)O)cccc3cc21</td><td><img src="../img/p_262.png" width="150"/></td><td>O=S(=O)(O)c1cccc2cc3c([O-])ccc([O-])c3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_281.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(S(=O)(=O)O)ccc3cc21</td><td><img src="../img/p_281.png" width="150"/></td><td>O=S(=O)(O)c1ccc2cc3c([O-])ccc([O-])c3cc2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_300.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_300.png" width="150"/></td><td>O=S(=O)(O)c1cc([O-])c2cc3ccccc3cc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_319.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(S(=O)(=O)O)cccc3c(=O)c1=2</td><td><img src="../img/p_319.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1cccc(S(=O)(=O)O)c1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_320.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(S(=O)(=O)O)cccc3c(=O)c1=2</td><td><img src="../img/p_320.png" width="150"/></td><td>O=C1c2cccc(S(=O)(=O)O)c2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_359.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(S(=O)(=O)O)ccc3c(=O)c1=2</td><td><img src="../img/p_359.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1ccc(S(=O)(=O)O)cc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_360.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(S(=O)(=O)O)ccc3c(=O)c1=2</td><td><img src="../img/p_360.png" width="150"/></td><td>O=C1c2ccc(S(=O)(=O)O)cc2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_400.png" width="150"/></td><td>O=c1cc(S(=O)(=O)O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_400.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2c1c([O-])c1ccccc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_401.png" width="150"/></td><td>O=c1cc(S(=O)(=O)O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_401.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c([O-])c(S(=O)(=O)O)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_439.png" width="150"/></td><td>O=c1ccc(=O)c2c(S(=O)(=O)O)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_439.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c([O-])ccc([O-])c1c2S(=O)(=O)O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_458.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(S(=O)(=O)O)cc(=O)c3cc12</td><td><img src="../img/p_458.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c([O-])c(S(=O)(=O)O)cc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_459.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(S(=O)(=O)O)cc(=O)c3cc12</td><td><img src="../img/p_459.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2cc3c([O-])ccc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_493.png" width="150"/></td><td>O=C1C=CC(=O)C(C(=O)O)=C1</td><td><img src="../img/p_493.png" width="150"/></td><td>O=C(O)c1cc([O-])ccc1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_514.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)C=CC2=O</td><td><img src="../img/p_514.png" width="150"/></td><td>O=C(O)c1cccc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_531.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)C=CC2=O</td><td><img src="../img/p_531.png" width="150"/></td><td>O=C(O)c1ccc2c([O-])ccc([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_549.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2ccccc2C1=O</td><td><img src="../img/p_549.png" width="150"/></td><td>O=C(O)c1cc([O-])c2ccccc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_567.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_567.png" width="150"/></td><td>O=C(O)c1cc([O-])c2c(c1[O-])C(=O)C=CC2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_568.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_568.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2c([O-])ccc([O-])c2C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_605.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)c1ccccc1C2=O</td><td><img src="../img/p_605.png" width="150"/></td><td>O=C(O)c1ccc2c([O-])c3ccccc3c([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_627.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)c1ccccc1C2=O</td><td><img src="../img/p_627.png" width="150"/></td><td>O=C(O)c1cccc2c([O-])c3ccccc3c([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_648.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2C(=O)O</td><td><img src="../img/p_648.png" width="150"/></td><td>O=C(O)c1c2ccccc2cc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_665.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(C(=O)O)cccc3cc21</td><td><img src="../img/p_665.png" width="150"/></td><td>O=C(O)c1cccc2cc3c([O-])ccc([O-])c3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_683.png" width="150"/></td><td>O=C(O)c1ccc2cc3c(cc2c1)C(=O)C=CC3=O</td><td><img src="../img/p_683.png" width="150"/></td><td>O=C(O)c1ccc2cc3c([O-])ccc([O-])c3cc2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_701.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2cc3ccccc3cc2C1=O</td><td><img src="../img/p_701.png" width="150"/></td><td>O=C(O)c1cc([O-])c2cc3ccccc3cc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_719.png" width="150"/></td><td>O=C(O)c1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_719.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)c1c([O-])ccc([O-])c1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_720.png" width="150"/></td><td>O=C(O)c1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_720.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1cccc(C(=O)O)c1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_758.png" width="150"/></td><td>O=C(O)c1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_758.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)c1c([O-])ccc([O-])c1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_759.png" width="150"/></td><td>O=C(O)c1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_759.png" width="150"/></td><td>O=C(O)c1ccc2c([O-])c3c(c([O-])c2c1)C(=O)C=CC3=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_798.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_798.png" width="150"/></td><td>O=C(O)c1cc([O-])c2c(c1[O-])C(=O)c1ccccc1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_799.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_799.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2c(c([O-])c3ccccc3c2[O-])C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_836.png" width="150"/></td><td>O=C(O)c1c2c(=O)ccc(=O)c2cc2c(=O)ccc(=O)c12</td><td><img src="../img/p_836.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c([O-])ccc([O-])c1c2C(=O)O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_854.png" width="150"/></td><td>O=C(O)c1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_854.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c([O-])c(C(=O)O)cc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_855.png" width="150"/></td><td>O=C(O)c1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_855.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2cc3c([O-])ccc([O-])c3cc2C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_888.png" width="150"/></td><td>O=C1C=CC(=O)C(O)=C1</td><td><img src="../img/p_888.png" width="150"/></td><td>[O-]c1ccc([O-])c(O)c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_909.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)cccc21</td><td><img src="../img/p_909.png" width="150"/></td><td>[O-]c1ccc([O-])c2c(O)cccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_926.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(O)ccc21</td><td><img src="../img/p_926.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc(O)ccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_944.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2ccccc21</td><td><img src="../img/p_944.png" width="150"/></td><td>[O-]c1cc(O)c([O-])c2ccccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_962.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(O)cc(=O)c1=2</td><td><img src="../img/p_962.png" width="150"/></td><td>O=C1C=CC(=O)c2c([O-])c(O)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_963.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(O)cc(=O)c1=2</td><td><img src="../img/p_963.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1000.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(O)ccc21</td><td><img src="../img/p_1000.png" width="150"/></td><td>[O-]c1c2ccccc2c([O-])c2cc(O)ccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1022.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)cccc21</td><td><img src="../img/p_1022.png" width="150"/></td><td>[O-]c1c2ccccc2c([O-])c2c(O)cccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1043.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2O</td><td><img src="../img/p_1043.png" width="150"/></td><td>[O-]c1ccc([O-])c2c(O)c3ccccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1060.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)cccc3cc21</td><td><img src="../img/p_1060.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc3c(O)cccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1078.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(O)ccc3cc21</td><td><img src="../img/p_1078.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc3cc(O)ccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1096.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_1096.png" width="150"/></td><td>[O-]c1cc(O)c([O-])c2cc3ccccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1114.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(O)cccc3c(=O)c1=2</td><td><img src="../img/p_1114.png" width="150"/></td><td>O=C1c2cccc(O)c2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1115.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(O)cccc3c(=O)c1=2</td><td><img src="../img/p_1115.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1cccc(O)c1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1153.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(O)ccc3c(=O)c1=2</td><td><img src="../img/p_1153.png" width="150"/></td><td>O=C1c2ccc(O)cc2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1154.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(O)ccc3c(=O)c1=2</td><td><img src="../img/p_1154.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1ccc(O)cc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1193.png" width="150"/></td><td>O=c1cc(O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1193.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2c1c([O-])c1ccccc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1194.png" width="150"/></td><td>O=c1cc(O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1194.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c([O-])c(O)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1231.png" width="150"/></td><td>O=c1ccc(=O)c2c(O)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_1231.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c([O-])ccc([O-])c1c2O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1249.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(O)cc(=O)c3cc12</td><td><img src="../img/p_1249.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c([O-])c(O)cc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1250.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(O)cc(=O)c3cc12</td><td><img src="../img/p_1250.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2cc3c([O-])ccc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1283.png" width="150"/></td><td>NC1=CC(=O)C=CC1=O</td><td><img src="../img/p_1283.png" width="150"/></td><td>Nc1cc([O-])ccc1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1304.png" width="150"/></td><td>Nc1cccc2c1C(=O)C=CC2=O</td><td><img src="../img/p_1304.png" width="150"/></td><td>Nc1cccc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1321.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)C=CC2=O</td><td><img src="../img/p_1321.png" width="150"/></td><td>Nc1ccc2c([O-])ccc([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1339.png" width="150"/></td><td>NC1=CC(=O)c2ccccc2C1=O</td><td><img src="../img/p_1339.png" width="150"/></td><td>Nc1cc([O-])c2ccccc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1357.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_1357.png" width="150"/></td><td>NC1=CC(=O)c2c([O-])ccc([O-])c2C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1358.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_1358.png" width="150"/></td><td>Nc1cc([O-])c2c(c1[O-])C(=O)C=CC2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1395.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)c1ccccc1C2=O</td><td><img src="../img/p_1395.png" width="150"/></td><td>Nc1ccc2c([O-])c3ccccc3c([O-])c2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1417.png" width="150"/></td><td>Nc1cccc2c1C(=O)c1ccccc1C2=O</td><td><img src="../img/p_1417.png" width="150"/></td><td>Nc1cccc2c([O-])c3ccccc3c([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1438.png" width="150"/></td><td>Nc1c2c(cc3ccccc13)C(=O)C=CC2=O</td><td><img src="../img/p_1438.png" width="150"/></td><td>Nc1c2ccccc2cc2c([O-])ccc([O-])c12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1455.png" width="150"/></td><td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td><td><img src="../img/p_1455.png" width="150"/></td><td>Nc1cccc2cc3c([O-])ccc([O-])c3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1473.png" width="150"/></td><td>Nc1ccc2cc3c(cc2c1)C(=O)C=CC3=O</td><td><img src="../img/p_1473.png" width="150"/></td><td>Nc1ccc2cc3c([O-])ccc([O-])c3cc2c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1491.png" width="150"/></td><td>NC1=CC(=O)c2cc3ccccc3cc2C1=O</td><td><img src="../img/p_1491.png" width="150"/></td><td>Nc1cc([O-])c2cc3ccccc3cc2c1[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1509.png" width="150"/></td><td>Nc1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_1509.png" width="150"/></td><td>Nc1cccc2c1C(=O)c1c([O-])ccc([O-])c1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1510.png" width="150"/></td><td>Nc1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_1510.png" width="150"/></td><td>Nc1cccc2c([O-])c3c(c([O-])c12)C(=O)C=CC3=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1548.png" width="150"/></td><td>Nc1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_1548.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)c1c([O-])ccc([O-])c1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1549.png" width="150"/></td><td>Nc1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_1549.png" width="150"/></td><td>Nc1ccc2c([O-])c3c(c([O-])c2c1)C(=O)C=CC3=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1588.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_1588.png" width="150"/></td><td>Nc1cc([O-])c2c(c1[O-])C(=O)c1ccccc1C2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1589.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_1589.png" width="150"/></td><td>NC1=CC(=O)c2c(c([O-])c3ccccc3c2[O-])C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1626.png" width="150"/></td><td>Nc1c2c(=O)ccc(=O)c2cc2c(=O)ccc(=O)c12</td><td><img src="../img/p_1626.png" width="150"/></td><td>Nc1c2c(cc3c([O-])ccc([O-])c13)C(=O)C=CC2=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1644.png" width="150"/></td><td>Nc1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_1644.png" width="150"/></td><td>NC1=CC(=O)c2cc3c([O-])ccc([O-])c3cc2C1=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1645.png" width="150"/></td><td>Nc1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_1645.png" width="150"/></td><td>Nc1cc([O-])c2cc3c(cc2c1[O-])C(=O)C=CC3=O</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1678.png" width="150"/></td><td>O=C1C=CC(=O)C(Cl)=C1</td><td><img src="../img/p_1678.png" width="150"/></td><td>[O-]c1ccc([O-])c(Cl)c1</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1699.png" width="150"/></td><td>O=C1C=CC(=O)c2c(Cl)cccc21</td><td><img src="../img/p_1699.png" width="150"/></td><td>[O-]c1ccc([O-])c2c(Cl)cccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1716.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(Cl)ccc21</td><td><img src="../img/p_1716.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc(Cl)ccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1734.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2ccccc21</td><td><img src="../img/p_1734.png" width="150"/></td><td>[O-]c1cc(Cl)c([O-])c2ccccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1752.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(Cl)cc(=O)c1=2</td><td><img src="../img/p_1752.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1753.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(Cl)cc(=O)c1=2</td><td><img src="../img/p_1753.png" width="150"/></td><td>O=C1C=CC(=O)c2c([O-])c(Cl)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1790.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(Cl)ccc21</td><td><img src="../img/p_1790.png" width="150"/></td><td>[O-]c1c2ccccc2c([O-])c2cc(Cl)ccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1812.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(Cl)cccc21</td><td><img src="../img/p_1812.png" width="150"/></td><td>[O-]c1c2ccccc2c([O-])c2c(Cl)cccc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1833.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2Cl</td><td><img src="../img/p_1833.png" width="150"/></td><td>[O-]c1ccc([O-])c2c(Cl)c3ccccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1850.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(Cl)cccc3cc21</td><td><img src="../img/p_1850.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc3c(Cl)cccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1868.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(Cl)ccc3cc21</td><td><img src="../img/p_1868.png" width="150"/></td><td>[O-]c1ccc([O-])c2cc3cc(Cl)ccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1886.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_1886.png" width="150"/></td><td>[O-]c1cc(Cl)c([O-])c2cc3ccccc3cc12</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1904.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(Cl)cccc3c(=O)c1=2</td><td><img src="../img/p_1904.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1cccc(Cl)c1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1905.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(Cl)cccc3c(=O)c1=2</td><td><img src="../img/p_1905.png" width="150"/></td><td>O=C1c2cccc(Cl)c2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1943.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(Cl)ccc3c(=O)c1=2</td><td><img src="../img/p_1943.png" width="150"/></td><td>O=C1c2ccc(Cl)cc2C(=O)c2c([O-])ccc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1944.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(Cl)ccc3c(=O)c1=2</td><td><img src="../img/p_1944.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c([O-])c1ccc(Cl)cc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1983.png" width="150"/></td><td>O=c1cc(Cl)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1983.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c([O-])c(Cl)cc([O-])c21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1984.png" width="150"/></td><td>O=c1cc(Cl)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1984.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2c1c([O-])c1ccccc1c2[O-]</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_2021.png" width="150"/></td><td>O=c1ccc(=O)c2c(Cl)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_2021.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c([O-])ccc([O-])c1c2Cl</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_2039.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(Cl)cc(=O)c3cc12</td><td><img src="../img/p_2039.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2cc3c([O-])ccc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_2040.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(Cl)cc(=O)c3cc12</td><td><img src="../img/p_2040.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c([O-])c(Cl)cc([O-])c3cc21</td><td>Electrochemical reaction base step1</td><td></td></tr>
+
+      </table>
+      </div>
+      <script>
+        function exportTableToCSV() {
+            const table = document.getElementById("reactionTable");
+            let csvContent = "";
+            const targetIndices = [];
+
+            // 获取标题行并找出目标列索引
+            const headers = table.rows[0].cells;
+            for (let i = 0; i < headers.length; i++) {
+                const text = headers[i].innerText || headers[i].textContent;
+                if (["Reactant SMILES", "Product SMILES", "ElementaryStepName", "Reaction Energy"].includes(text.trim())) {
+                    targetIndices.push(i);
+                }
+            }
+
+            // 遍历表格行提取数据
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                let rowData = [];
+                for (let j = 0; j < targetIndices.length; j++) {
+                    const cell = row.cells[targetIndices[j]];
+                    const text = cell ? (cell.innerText || cell.textContent) : "";
+                    rowData.push('"' + text.replace(/"/g, '""') + '"');
+                }
+                csvContent += rowData.join(",") + "\n";
+            }
+
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Electrochemical_reaction_base.csv";
+            link.click();
+        }
+      </script>
+</body>
+</html>

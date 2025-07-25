@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protodesulfonation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-top: 30px; }
+    .scroll-table { overflow-x: auto; margin-bottom: 40px; }
+    table {
+      margin-top: 10px;
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1200px;
+      table-layout: fixed;
+    }
+    table, th, td { border: 1px solid #ccc; }
+    th, td {
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+    }
+    img {
+        display: block;
+        max-width: 550px;
+        margin: auto;
+    }
+    .export-btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .export-btn:hover {
+        background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <img src="../modes.svg" alt="Header Image" style="width: 100%; max-height: 200px; object-fit: cover;" />
+  <button class="export-btn" onclick="exportTableToCSV()">Export to CSV</button>
+  <div class="scroll-table">
+  <table id="reactionTable">
+
+        <tr>
+          <th>Reactant</th><th>Reactant SMILES</th>
+          <th>Product</th><th>Product SMILES</th>
+          <th>ElementaryStepName</th><th>Reaction Energy</th>
+        </tr>
+        <tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_87.png" width="150"/></td><td>O=C1C=CC(=O)C(S(=O)(=O)O)=C1</td><td><img src="../img/p_87.png" width="150"/></td><td>O=C1C=CC(=O)C=C1</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_109.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_109.png" width="150"/></td><td>O=C1C=CC(=O)c2ccccc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_127.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_127.png" width="150"/></td><td>O=C1C=CC(=O)c2ccccc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_146.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2ccccc21</td><td><img src="../img/p_146.png" width="150"/></td><td>O=C1C=CC(=O)c2ccccc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_170.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(S(=O)(=O)O)cc(=O)c1=2</td><td><img src="../img/p_170.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)ccc(=O)c1=2</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_204.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_204.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2ccccc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_226.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_226.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2ccccc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_249.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2S(=O)(=O)O</td><td><img src="../img/p_249.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_267.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(S(=O)(=O)O)cccc3cc21</td><td><img src="../img/p_267.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_286.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(S(=O)(=O)O)ccc3cc21</td><td><img src="../img/p_286.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_305.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_305.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_329.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(S(=O)(=O)O)cccc3c(=O)c1=2</td><td><img src="../img/p_329.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_369.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(S(=O)(=O)O)ccc3c(=O)c1=2</td><td><img src="../img/p_369.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_410.png" width="150"/></td><td>O=c1cc(S(=O)(=O)O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_410.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_444.png" width="150"/></td><td>O=c1ccc(=O)c2c(S(=O)(=O)O)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_444.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)ccc(=O)c3cc12</td><td>Protodesulfonation step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_468.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(S(=O)(=O)O)cc(=O)c3cc12</td><td><img src="../img/p_468.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)ccc(=O)c3cc12</td><td>Protodesulfonation step1</td><td></td></tr>
+
+      </table>
+      </div>
+      <script>
+        function exportTableToCSV() {
+            const table = document.getElementById("reactionTable");
+            let csvContent = "";
+            const targetIndices = [];
+
+            // 获取标题行并找出目标列索引
+            const headers = table.rows[0].cells;
+            for (let i = 0; i < headers.length; i++) {
+                const text = headers[i].innerText || headers[i].textContent;
+                if (["Reactant SMILES", "Product SMILES", "ElementaryStepName", "Reaction Energy"].includes(text.trim())) {
+                    targetIndices.push(i);
+                }
+            }
+
+            // 遍历表格行提取数据
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                let rowData = [];
+                for (let j = 0; j < targetIndices.length; j++) {
+                    const cell = row.cells[targetIndices[j]];
+                    const text = cell ? (cell.innerText || cell.textContent) : "";
+                    rowData.push('"' + text.replace(/"/g, '""') + '"');
+                }
+                csvContent += rowData.join(",") + "\n";
+            }
+
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Protodesulfonation.csv";
+            link.click();
+        }
+      </script>
+</body>
+</html>

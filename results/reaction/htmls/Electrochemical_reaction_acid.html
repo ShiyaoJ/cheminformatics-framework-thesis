@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrochemical reaction acid</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-top: 30px; }
+    .scroll-table { overflow-x: auto; margin-bottom: 40px; }
+    table {
+      margin-top: 10px;
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1200px;
+      table-layout: fixed;
+    }
+    table, th, td { border: 1px solid #ccc; }
+    th, td {
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+    }
+    img {
+        display: block;
+        max-width: 550px;
+        margin: auto;
+    }
+    .export-btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .export-btn:hover {
+        background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <img src="../modes.svg" alt="Header Image" style="width: 100%; max-height: 200px; object-fit: cover;" />
+  <button class="export-btn" onclick="exportTableToCSV()">Export to CSV</button>
+  <div class="scroll-table">
+  <table id="reactionTable">
+
+        <tr>
+          <th>Reactant</th><th>Reactant SMILES</th>
+          <th>Product</th><th>Product SMILES</th>
+          <th>ElementaryStepName</th><th>Reaction Energy</th>
+        </tr>
+        <tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_0.png" width="150"/></td><td>O=C1C=CC(=O)C=C1</td><td><img src="../img/p_0.png" width="150"/></td><td>Oc1ccc(O)cc1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_9.png" width="150"/></td><td>O=C1C=CC(=O)c2ccccc21</td><td><img src="../img/p_9.png" width="150"/></td><td>Oc1ccc(O)c2ccccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_19.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)ccc(=O)c1=2</td><td><img src="../img/p_19.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_30.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2ccccc21</td><td><img src="../img/p_30.png" width="150"/></td><td>Oc1c2ccccc2c(O)c2ccccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_39.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_39.png" width="150"/></td><td>Oc1ccc(O)c2cc3ccccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_49.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_49.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)ccc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_59.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_59.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1ccccc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_60.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_60.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_81.png" width="150"/></td><td>O=C1C=CC(=O)C(S(=O)(=O)O)=C1</td><td><img src="../img/p_81.png" width="150"/></td><td>O=S(=O)(O)c1cc(O)ccc1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_103.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_103.png" width="150"/></td><td>O=S(=O)(O)c1cccc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_121.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_121.png" width="150"/></td><td>O=S(=O)(O)c1ccc2c(O)ccc(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_140.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2ccccc21</td><td><img src="../img/p_140.png" width="150"/></td><td>O=S(=O)(O)c1cc(O)c2ccccc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_158.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(S(=O)(=O)O)cc(=O)c1=2</td><td><img src="../img/p_158.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_159.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(S(=O)(=O)O)cc(=O)c1=2</td><td><img src="../img/p_159.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)c(S(=O)(=O)O)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_198.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c1cccc2S(=O)(=O)O</td><td><img src="../img/p_198.png" width="150"/></td><td>O=S(=O)(O)c1cccc2c(O)c3ccccc3c(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_220.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(S(=O)(=O)O)ccc21</td><td><img src="../img/p_220.png" width="150"/></td><td>O=S(=O)(O)c1ccc2c(O)c3ccccc3c(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_243.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2S(=O)(=O)O</td><td><img src="../img/p_243.png" width="150"/></td><td>O=S(=O)(O)c1c2ccccc2cc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_261.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(S(=O)(=O)O)cccc3cc21</td><td><img src="../img/p_261.png" width="150"/></td><td>O=S(=O)(O)c1cccc2cc3c(O)ccc(O)c3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_280.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(S(=O)(=O)O)ccc3cc21</td><td><img src="../img/p_280.png" width="150"/></td><td>O=S(=O)(O)c1ccc2cc3c(O)ccc(O)c3cc2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_299.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_299.png" width="150"/></td><td>O=S(=O)(O)c1cc(O)c2cc3ccccc3cc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_317.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(S(=O)(=O)O)cccc3c(=O)c1=2</td><td><img src="../img/p_317.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1cccc(S(=O)(=O)O)c1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_318.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(S(=O)(=O)O)cccc3c(=O)c1=2</td><td><img src="../img/p_318.png" width="150"/></td><td>O=C1c2cccc(S(=O)(=O)O)c2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_357.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(S(=O)(=O)O)ccc3c(=O)c1=2</td><td><img src="../img/p_357.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1ccc(S(=O)(=O)O)cc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_358.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(S(=O)(=O)O)ccc3c(=O)c1=2</td><td><img src="../img/p_358.png" width="150"/></td><td>O=C1c2ccc(S(=O)(=O)O)cc2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_398.png" width="150"/></td><td>O=c1cc(S(=O)(=O)O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_398.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)c(S(=O)(=O)O)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_399.png" width="150"/></td><td>O=c1cc(S(=O)(=O)O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_399.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2c1c(O)c1ccccc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_438.png" width="150"/></td><td>O=c1ccc(=O)c2c(S(=O)(=O)O)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_438.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c(O)ccc(O)c1c2S(=O)(=O)O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_456.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(S(=O)(=O)O)cc(=O)c3cc12</td><td><img src="../img/p_456.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)c(S(=O)(=O)O)cc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_457.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(S(=O)(=O)O)cc(=O)c3cc12</td><td><img src="../img/p_457.png" width="150"/></td><td>O=C1C=C(S(=O)(=O)O)C(=O)c2cc3c(O)ccc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_492.png" width="150"/></td><td>O=C1C=CC(=O)C(C(=O)O)=C1</td><td><img src="../img/p_492.png" width="150"/></td><td>O=C(O)c1cc(O)ccc1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_513.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)C=CC2=O</td><td><img src="../img/p_513.png" width="150"/></td><td>O=C(O)c1cccc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_530.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)C=CC2=O</td><td><img src="../img/p_530.png" width="150"/></td><td>O=C(O)c1ccc2c(O)ccc(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_548.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2ccccc2C1=O</td><td><img src="../img/p_548.png" width="150"/></td><td>O=C(O)c1cc(O)c2ccccc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_565.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_565.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2c(O)ccc(O)c2C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_566.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_566.png" width="150"/></td><td>O=C(O)c1cc(O)c2c(c1O)C(=O)C=CC2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_604.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)c1ccccc1C2=O</td><td><img src="../img/p_604.png" width="150"/></td><td>O=C(O)c1ccc2c(O)c3ccccc3c(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_626.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)c1ccccc1C2=O</td><td><img src="../img/p_626.png" width="150"/></td><td>O=C(O)c1cccc2c(O)c3ccccc3c(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_647.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2C(=O)O</td><td><img src="../img/p_647.png" width="150"/></td><td>O=C(O)c1c2ccccc2cc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_664.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(C(=O)O)cccc3cc21</td><td><img src="../img/p_664.png" width="150"/></td><td>O=C(O)c1cccc2cc3c(O)ccc(O)c3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_682.png" width="150"/></td><td>O=C(O)c1ccc2cc3c(cc2c1)C(=O)C=CC3=O</td><td><img src="../img/p_682.png" width="150"/></td><td>O=C(O)c1ccc2cc3c(O)ccc(O)c3cc2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_700.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2cc3ccccc3cc2C1=O</td><td><img src="../img/p_700.png" width="150"/></td><td>O=C(O)c1cc(O)c2cc3ccccc3cc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_717.png" width="150"/></td><td>O=C(O)c1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_717.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1cccc(C(=O)O)c1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_718.png" width="150"/></td><td>O=C(O)c1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_718.png" width="150"/></td><td>O=C(O)c1cccc2c1C(=O)c1c(O)ccc(O)c1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_756.png" width="150"/></td><td>O=C(O)c1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_756.png" width="150"/></td><td>O=C(O)c1ccc2c(c1)C(=O)c1c(O)ccc(O)c1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_757.png" width="150"/></td><td>O=C(O)c1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_757.png" width="150"/></td><td>O=C(O)c1ccc2c(O)c3c(c(O)c2c1)C(=O)C=CC3=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_796.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_796.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2c(c(O)c3ccccc3c2O)C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_797.png" width="150"/></td><td>O=C(O)c1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_797.png" width="150"/></td><td>O=C(O)c1cc(O)c2c(c1O)C(=O)c1ccccc1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_835.png" width="150"/></td><td>O=C(O)c1c2c(=O)ccc(=O)c2cc2c(=O)ccc(=O)c12</td><td><img src="../img/p_835.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c(O)ccc(O)c1c2C(=O)O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_852.png" width="150"/></td><td>O=C(O)c1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_852.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)c(C(=O)O)cc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_853.png" width="150"/></td><td>O=C(O)c1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_853.png" width="150"/></td><td>O=C(O)C1=CC(=O)c2cc3c(O)ccc(O)c3cc2C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_887.png" width="150"/></td><td>O=C1C=CC(=O)C(O)=C1</td><td><img src="../img/p_887.png" width="150"/></td><td>Oc1ccc(O)c(O)c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_908.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)cccc21</td><td><img src="../img/p_908.png" width="150"/></td><td>Oc1ccc(O)c2c(O)cccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_925.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(O)ccc21</td><td><img src="../img/p_925.png" width="150"/></td><td>Oc1ccc2c(O)ccc(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_943.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2ccccc21</td><td><img src="../img/p_943.png" width="150"/></td><td>Oc1cc(O)c2ccccc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_960.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(O)cc(=O)c1=2</td><td><img src="../img/p_960.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_961.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(O)cc(=O)c1=2</td><td><img src="../img/p_961.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)c(O)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_999.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(O)ccc21</td><td><img src="../img/p_999.png" width="150"/></td><td>Oc1ccc2c(O)c3ccccc3c(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1021.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)cccc21</td><td><img src="../img/p_1021.png" width="150"/></td><td>Oc1c2ccccc2c(O)c2c(O)cccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1042.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2O</td><td><img src="../img/p_1042.png" width="150"/></td><td>Oc1ccc(O)c2c(O)c3ccccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1059.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)cccc3cc21</td><td><img src="../img/p_1059.png" width="150"/></td><td>Oc1cccc2cc3c(O)ccc(O)c3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1077.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(O)ccc3cc21</td><td><img src="../img/p_1077.png" width="150"/></td><td>Oc1ccc2cc3c(O)ccc(O)c3cc2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1095.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_1095.png" width="150"/></td><td>Oc1cc(O)c2cc3ccccc3cc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1112.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(O)cccc3c(=O)c1=2</td><td><img src="../img/p_1112.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1cccc(O)c1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1113.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(O)cccc3c(=O)c1=2</td><td><img src="../img/p_1113.png" width="150"/></td><td>O=C1c2cccc(O)c2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1151.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(O)ccc3c(=O)c1=2</td><td><img src="../img/p_1151.png" width="150"/></td><td>O=C1c2ccc(O)cc2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1152.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(O)ccc3c(=O)c1=2</td><td><img src="../img/p_1152.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1ccc(O)cc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1191.png" width="150"/></td><td>O=c1cc(O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1191.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2c1c(O)c1ccccc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1192.png" width="150"/></td><td>O=c1cc(O)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1192.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)c(O)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1230.png" width="150"/></td><td>O=c1ccc(=O)c2c(O)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_1230.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c(O)ccc(O)c1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1247.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(O)cc(=O)c3cc12</td><td><img src="../img/p_1247.png" width="150"/></td><td>O=C1C=C(O)C(=O)c2cc3c(O)ccc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1248.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(O)cc(=O)c3cc12</td><td><img src="../img/p_1248.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)c(O)cc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1282.png" width="150"/></td><td>NC1=CC(=O)C=CC1=O</td><td><img src="../img/p_1282.png" width="150"/></td><td>Nc1cc(O)ccc1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1303.png" width="150"/></td><td>Nc1cccc2c1C(=O)C=CC2=O</td><td><img src="../img/p_1303.png" width="150"/></td><td>Nc1cccc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1320.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)C=CC2=O</td><td><img src="../img/p_1320.png" width="150"/></td><td>Nc1ccc2c(O)ccc(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1338.png" width="150"/></td><td>NC1=CC(=O)c2ccccc2C1=O</td><td><img src="../img/p_1338.png" width="150"/></td><td>Nc1cc(O)c2ccccc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1355.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_1355.png" width="150"/></td><td>NC1=CC(=O)c2c(O)ccc(O)c2C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1356.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)ccc(=O)c=2c1=O</td><td><img src="../img/p_1356.png" width="150"/></td><td>Nc1cc(O)c2c(c1O)C(=O)C=CC2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1394.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)c1ccccc1C2=O</td><td><img src="../img/p_1394.png" width="150"/></td><td>Nc1ccc2c(O)c3ccccc3c(O)c2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1416.png" width="150"/></td><td>Nc1cccc2c1C(=O)c1ccccc1C2=O</td><td><img src="../img/p_1416.png" width="150"/></td><td>Nc1cccc2c(O)c3ccccc3c(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1437.png" width="150"/></td><td>Nc1c2c(cc3ccccc13)C(=O)C=CC2=O</td><td><img src="../img/p_1437.png" width="150"/></td><td>Nc1c2ccccc2cc2c(O)ccc(O)c12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1454.png" width="150"/></td><td>Nc1cccc2cc3c(cc12)C(=O)C=CC3=O</td><td><img src="../img/p_1454.png" width="150"/></td><td>Nc1cccc2cc3c(O)ccc(O)c3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1472.png" width="150"/></td><td>Nc1ccc2cc3c(cc2c1)C(=O)C=CC3=O</td><td><img src="../img/p_1472.png" width="150"/></td><td>Nc1ccc2cc3c(O)ccc(O)c3cc2c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1490.png" width="150"/></td><td>NC1=CC(=O)c2cc3ccccc3cc2C1=O</td><td><img src="../img/p_1490.png" width="150"/></td><td>Nc1cc(O)c2cc3ccccc3cc2c1O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1507.png" width="150"/></td><td>Nc1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_1507.png" width="150"/></td><td>Nc1cccc2c1C(=O)c1c(O)ccc(O)c1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1508.png" width="150"/></td><td>Nc1cccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c12</td><td><img src="../img/p_1508.png" width="150"/></td><td>Nc1cccc2c(O)c3c(c(O)c12)C(=O)C=CC3=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1546.png" width="150"/></td><td>Nc1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_1546.png" width="150"/></td><td>Nc1ccc2c(c1)C(=O)c1c(O)ccc(O)c1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1547.png" width="150"/></td><td>Nc1ccc2c(=O)c3c(=O)ccc(=O)c=3c(=O)c2c1</td><td><img src="../img/p_1547.png" width="150"/></td><td>Nc1ccc2c(O)c3c(c(O)c2c1)C(=O)C=CC3=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1586.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_1586.png" width="150"/></td><td>NC1=CC(=O)c2c(c(O)c3ccccc3c2O)C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1587.png" width="150"/></td><td>Nc1cc(=O)c2c(=O)c3ccccc3c(=O)c=2c1=O</td><td><img src="../img/p_1587.png" width="150"/></td><td>Nc1cc(O)c2c(c1O)C(=O)c1ccccc1C2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1625.png" width="150"/></td><td>Nc1c2c(=O)ccc(=O)c2cc2c(=O)ccc(=O)c12</td><td><img src="../img/p_1625.png" width="150"/></td><td>Nc1c2c(cc3c(O)ccc(O)c13)C(=O)C=CC2=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1642.png" width="150"/></td><td>Nc1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_1642.png" width="150"/></td><td>NC1=CC(=O)c2cc3c(O)ccc(O)c3cc2C1=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1643.png" width="150"/></td><td>Nc1cc(=O)c2cc3c(=O)ccc(=O)c3cc2c1=O</td><td><img src="../img/p_1643.png" width="150"/></td><td>Nc1cc(O)c2cc3c(cc2c1O)C(=O)C=CC3=O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1677.png" width="150"/></td><td>O=C1C=CC(=O)C(Cl)=C1</td><td><img src="../img/p_1677.png" width="150"/></td><td>Oc1ccc(O)c(Cl)c1</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1698.png" width="150"/></td><td>O=C1C=CC(=O)c2c(Cl)cccc21</td><td><img src="../img/p_1698.png" width="150"/></td><td>Oc1ccc(O)c2c(Cl)cccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1715.png" width="150"/></td><td>O=C1C=CC(=O)c2cc(Cl)ccc21</td><td><img src="../img/p_1715.png" width="150"/></td><td>Oc1ccc(O)c2cc(Cl)ccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1733.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2ccccc21</td><td><img src="../img/p_1733.png" width="150"/></td><td>Oc1cc(Cl)c(O)c2ccccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1750.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(Cl)cc(=O)c1=2</td><td><img src="../img/p_1750.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1751.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c(Cl)cc(=O)c1=2</td><td><img src="../img/p_1751.png" width="150"/></td><td>O=C1C=CC(=O)c2c(O)c(Cl)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1789.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2cc(Cl)ccc21</td><td><img src="../img/p_1789.png" width="150"/></td><td>Oc1c2ccccc2c(O)c2cc(Cl)ccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1811.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(Cl)cccc21</td><td><img src="../img/p_1811.png" width="150"/></td><td>Oc1c2ccccc2c(O)c2c(Cl)cccc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1832.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1ccccc1c2Cl</td><td><img src="../img/p_1832.png" width="150"/></td><td>Oc1ccc(O)c2c(Cl)c3ccccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1849.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(Cl)cccc3cc21</td><td><img src="../img/p_1849.png" width="150"/></td><td>Oc1ccc(O)c2cc3c(Cl)cccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1867.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3cc(Cl)ccc3cc21</td><td><img src="../img/p_1867.png" width="150"/></td><td>Oc1ccc(O)c2cc3cc(Cl)ccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1885.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2cc3ccccc3cc21</td><td><img src="../img/p_1885.png" width="150"/></td><td>Oc1cc(Cl)c(O)c2cc3ccccc3cc12</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1902.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(Cl)cccc3c(=O)c1=2</td><td><img src="../img/p_1902.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1cccc(Cl)c1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1903.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3c(Cl)cccc3c(=O)c1=2</td><td><img src="../img/p_1903.png" width="150"/></td><td>O=C1c2cccc(Cl)c2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1941.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(Cl)ccc3c(=O)c1=2</td><td><img src="../img/p_1941.png" width="150"/></td><td>O=C1C=CC(=O)c2c1c(O)c1ccc(Cl)cc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1942.png" width="150"/></td><td>O=c1ccc(=O)c2c(=O)c3cc(Cl)ccc3c(=O)c1=2</td><td><img src="../img/p_1942.png" width="150"/></td><td>O=C1c2ccc(Cl)cc2C(=O)c2c(O)ccc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_1981.png" width="150"/></td><td>O=c1cc(Cl)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1981.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2c1c(O)c1ccccc1c2O</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_1982.png" width="150"/></td><td>O=c1cc(Cl)c(=O)c2c(=O)c3ccccc3c(=O)c1=2</td><td><img src="../img/p_1982.png" width="150"/></td><td>O=C1c2ccccc2C(=O)c2c(O)c(Cl)cc(O)c21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_2020.png" width="150"/></td><td>O=c1ccc(=O)c2c(Cl)c3c(=O)ccc(=O)c3cc12</td><td><img src="../img/p_2020.png" width="150"/></td><td>O=C1C=CC(=O)c2c1cc1c(O)ccc(O)c1c2Cl</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; border-top: 3px solid black;"><td><img src="../img/r_2037.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(Cl)cc(=O)c3cc12</td><td><img src="../img/p_2037.png" width="150"/></td><td>O=C1C=C(Cl)C(=O)c2cc3c(O)ccc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+<tr style="background-color:#ffffff; "><td><img src="../img/r_2038.png" width="150"/></td><td>O=c1ccc(=O)c2cc3c(=O)c(Cl)cc(=O)c3cc12</td><td><img src="../img/p_2038.png" width="150"/></td><td>O=C1C=CC(=O)c2cc3c(O)c(Cl)cc(O)c3cc21</td><td>Electrochemical reaction acid step1</td><td></td></tr>
+
+      </table>
+      </div>
+      <script>
+        function exportTableToCSV() {
+            const table = document.getElementById("reactionTable");
+            let csvContent = "";
+            const targetIndices = [];
+
+            // 获取标题行并找出目标列索引
+            const headers = table.rows[0].cells;
+            for (let i = 0; i < headers.length; i++) {
+                const text = headers[i].innerText || headers[i].textContent;
+                if (["Reactant SMILES", "Product SMILES", "ElementaryStepName", "Reaction Energy"].includes(text.trim())) {
+                    targetIndices.push(i);
+                }
+            }
+
+            // 遍历表格行提取数据
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                let rowData = [];
+                for (let j = 0; j < targetIndices.length; j++) {
+                    const cell = row.cells[targetIndices[j]];
+                    const text = cell ? (cell.innerText || cell.textContent) : "";
+                    rowData.push('"' + text.replace(/"/g, '""') + '"');
+                }
+                csvContent += rowData.join(",") + "\n";
+            }
+
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Electrochemical_reaction_acid.csv";
+            link.click();
+        }
+      </script>
+</body>
+</html>
